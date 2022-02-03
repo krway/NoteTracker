@@ -1,0 +1,33 @@
+.main {
+  height: 93vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../../img/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.intro-text {
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 95px;
+}
+
+p {
+  font-size: 32px;
+  padding: 10px;
+}
+
+.btn {
+  width: 150px;
+  margin: 30px 40px 0px 40px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .title {
+    padding: 0 300px;
+  }
+}
