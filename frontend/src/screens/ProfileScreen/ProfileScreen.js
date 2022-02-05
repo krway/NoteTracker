@@ -38,9 +38,9 @@ const ProfileScreen = ({ location, history }) => {
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
-      data.append("upload_preset", "notezipper");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("upload_preset", "notetracker");
+      data.append("cloud_name", "dzncwaag3");
+      fetch("https://api.cloudinary.com/v1_1/dzncwaag3/image/upload", {
         method: "post",
         body: data,
       })
@@ -62,7 +62,7 @@ const ProfileScreen = ({ location, history }) => {
 
     dispatch(updateProfile({ name, email, password, pic }));
   };
-
+  console.log(pic);
   return (
     <MainScreen title="EDIT PROFILE">
       <div>

@@ -35,16 +35,16 @@ function RegisterScreen({ history }) {
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
-      data.append("upload_preset", "notezipper");
-      data.append("cloud_name", "piyushproj");
+      data.append("upload_preset", "notetracker");
+      data.append("cloud_name", "dzncwaag3");
       fetch("https://api.cloudinary.com/v1_1/dzncwaag3/image/upload", {
         method: "post",
         body: data,
       })
         .then((res) => res.json())
         .then((data) => {
+          console.log(data);
           setPic(data.url.toString());
-          console.log(pic);
         })
         .catch((err) => {
           console.log(err);
